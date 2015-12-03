@@ -1,9 +1,89 @@
 @charset "utf-8";
 
+$root-line-height: 1.8;
+
 @import "node_modules/sanitize.css/sanitize.scss";
 
 body {
   color: #fff;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.container {
+  margin: 10px;
+}
+
+.headline {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.header {
+  text-align: right;
+}
+
+.section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  img {
+    max-width: 100%;
+  }
+}
+
+.catch {
+  font-size: 1.8rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.info {
+  font-size: 1.3rem;
+}
+
+.ex-list {
+  list-style: none;
+
+  li::before {
+    content: "・";
+  }
+}
+
+.contact-list {
+  dt, dd {
+    float: left;
+  }
+
+  dt {
+    width: 4rem;
+  }
+
+  dd {
+    width: calc(100% - 4rem);
+  }
+
+  dt::after {
+    content: "：";
+  }
+}
+
+.ecc {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  font-size: .8rem;
 }
 
 #symbol {
