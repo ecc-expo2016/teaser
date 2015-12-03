@@ -1,9 +1,10 @@
 'use strict';
+import 'picturefill';
 import Symbol from './symbol';
 
 const share = {
   init() {
-    this.title = 'ECC EXPO 2016';
+    this.title = 'ECC EXPO 2016 Teaser Site';
     this.href = 'http://expo-ecc.com/';
 
     const twitterBtn = document.getElementById('twitter');

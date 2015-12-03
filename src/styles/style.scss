@@ -1,89 +1,178 @@
 @charset "utf-8";
 
+$root-color: #fff;
 $root-line-height: 1.8;
+$root-font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif;
 
 @import "node_modules/sanitize.css/sanitize.scss";
 
-body {
-  color: #fff;
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.clearfix {
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
+address {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 .container {
-  margin: 10px;
+  margin: 1rem;
 }
 
 .headline {
   font-size: 1.6rem;
-  margin-bottom: 10px;
+  margin-bottom: .3em;
+
+  @media (min-width: 60rem) {
+    text-shadow: 1px 1px 1px rgba(#000,.3);
+  }
 }
 
 .header {
   text-align: right;
 }
 
-.section {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .logo {
-  img {
+  img,
+  source {
     max-width: 100%;
   }
 }
 
 .catch {
-  font-size: 1.8rem;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: .4em;
+  margin-bottom: .2em;
+  font-size: 2rem;
 }
 
 .info {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
-.ex-list {
+.share {
+  margin-top: 1rem;
   list-style: none;
 
-  li::before {
-    content: "・";
+  li {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  button {
+    border: 2px solid;
+    border-radius: 50%;
+    transition: background-color .3s;
   }
 }
 
-.contact-list {
-  dt, dd {
-    float: left;
+#twitter:hover {
+  background-color: #55acee;
+}
+
+#facebook:hover {
+  background-color: #3b5998;
+}
+
+.main {
+  @media (min-width: 60rem) {
+    max-width: 34rem;
+    font-size: 90%;
+  }
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.exhibition-list {
+  list-style: none;
+
+  li {
+    &::before {
+      content: "・";
+    }
+
+    @media (min-width: 60rem) {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+
+.contact-dl {
+  display: flex;
+  flex-wrap: wrap;
+
+  .nowrap {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
   }
 
   dt {
-    width: 4rem;
+    flex-basis: 3em;
+    max-width: 3em;
+
+    &::after {
+      content: "："
+    }
   }
 
   dd {
-    width: calc(100% - 4rem);
-  }
-
-  dt::after {
-    content: "：";
+    flex-basis: calc(100% - 3em);
+    max-width: calc(100% - 3em);
   }
 }
 
 .ecc {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .copyright {
-  text-align: center;
+  margin-top: 2rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-top: 1em;
+  padding-right: 1rem;
+  padding-left: 1rem;
   font-size: .8rem;
+  text-align: center;
+  border-top: 1px dotted;
+
+  @media (min-width: 60rem) {
+    text-align: right;
+    border-top: 0;
+  }
 }
 
 #symbol {
@@ -103,6 +192,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#000,.4);
+    background-color: rgba(#000,.3);
   }
 }
