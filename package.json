@@ -1,6 +1,6 @@
 {
   "name": "teaser",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Teaser site of ECC EXPO 2016",
   "scripts": {
     "start": "gulp dev",
@@ -11,12 +11,15 @@
     "type": "git",
     "url": "https://github.com/ecc-expo2016/teaser.git"
   },
-  "author": "Yuhei Yasuda",
+  "contributor": [
+    "Yuhei Yasuda",
+    "Makoto Tanaka"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ecc-expo2016/teaser/issues"
   },
-  "homepage": "https://github.com/ecc-expo2016/teaser#readme",
+  "homepage": "http://expo-ecc.com/",
   "dependencies": {
     "lodash.random": "^3.0.1",
     "lodash.sample": "^3.1.0",
