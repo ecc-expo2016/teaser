@@ -47,88 +47,91 @@
        }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div class="container fade-in">
+    <div class="container">
       <header class="header">
+        <p class="catch">
+          <img src="/assets/img/catch.png" width="202" height="51" alt="I have a dream.">
+        </p>
+
         <h1 class="logo">
-          <picture>
-            <source media="(min-width: 60rem)" srcset="/assets/img/logo_pc.png">
-            <img src="/assets/img/logo_sp.png" width="603" height="62" alt="ECC EXPO 2016">
-          </picture>
+          <img src="/assets/img/logo.png" width="309" height="39" alt="ECC EXPO 2016">
         </h1>
 
-        <p class="catch">I have a dream.</p>
-
-        <div class="info">
-          <p>
-            <time datetime="2016-02-26">2016年2月26日(金)</time>・<!--
-            --><time datetime="2016-02-27">27日(土)</time>
-          </p>
-          <p>@ 梅田クリスタルホール<p>
+        <div class="info brilliance">
+          <p>2016年2月26日(金)・27日(土)</p>
+          <p>@ 梅田クリスタルホール</p>
         </div>
 
-        <ul class="share">
+        <p class="detail">
+          <button id="modal-open" class="brilliance">イベント詳細</button>
+        </p>
+      </header>
+
+      <div id="modal-mask" class="modal__mask modal__mask--close"></div>
+      <main id="modal" class="modal modal--close">
+        <div class="modal__close">
+          <img id="modal-close" src="/assets/img/close.png" width="20" height="20" alt="Close">
+        </div>
+
+        <section class="section">
+          <h1 class="section__title">ECC EXPOとは</h1>
+          <div class="section__body">
+            <p>ECCコンピュータ専門学校のゲーム・CG・アニメ・デザイン・IT業界を目指す<br>学生たちの作品発表イベント「ECC EXPO」。</p>
+            <p>各分野のプロを目指す学生たちの1年間の集大成として、作品の展示とコンペを開催します。</p>
+            <p>学生たちの「アイデア」が存分に発揮された作品の数々が一同に展示されます。</p>
+            <p>その中からプロの厳しい審査を受け、最優秀の作品が表彰されます。</p>
+            <p>学生たちの本気の作品。是非とも足を運んで見に来てください。</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h1 class="section__title">部門</h1>
+          <div class="section__body">
+            <ul class="exhibition-list">
+              <li>ゲームソフト / ゲーム企画 / 3Dイラスト / 2D イラスト</li>
+              <li>3D アニメーション / 作画アニメーション</li>
+              <li>Web デザイン / グラフィックデザイン / システム・アプリケーション</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h1 class="section__title">お問い合わせ</h1>
+          <div class="section__body">
+            <dl class="contact-dl">
+              <dt>主催</dt>
+              <dd>ECC EXPO 運営実行委員会</dd>
+              <dt>住所</dt>
+              <dd>〒530-0015　<span class="nowrap">大阪市北区中崎西2-3-35</span></dd>
+              <dt>電話</dt>
+              <dd>06-6374-0144</dd>
+            </dl>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <ul class="socials">
           <li>
             <button id="twitter">
-              <img src="/assets/img/twitter.png" width="50" height="50" alt="Share on Twitter">
+              <img src="/assets/img/twitter.png" width="49" height="49" alt="Share on Twitter">
             </button>
           </li><!--
           --><li>
             <button id="facebook">
-              <img src="/assets/img/facebook.png" width="50" height="50" alt="Share on Facebook">
+              <img src="/assets/img/facebook.png" width="49" height="49" alt="Share on Facebook">
             </button>
           </li>
         </ul>
-      </header>
 
-      <main class="main">
-        <section class="section">
-          <h1 class="headline">ECC EXPOとは</h1>
-          <p>
-            ECCコンピュータ専門学校では年に一度、全カレッジ合同の作品コンテスト「ECC EXPO」。<br>
-            ゲーム・CG・アニメ・Web・グラフィック・システム各分野の優秀作品の展示会と、各部門賞の表彰を行います。<br>
-            学生たちの「アイデア」が存分に発揮された作品の数々が一同に展示されます。<br>
-            学生が本気で取り組んだ作品の数々を是非ともご覧ください。
-          </p>
-        </section>
-
-        <section class="section">
-          <h1 class="headline">展示内容</h1>
-          <ul class="exhibition-list">
-            <li>ゲームソフト</li><!--
-            --><li>ゲーム企画</li><!--
-            --><li>3Dイラスト</li><!--
-            --><li>2Dイラスト</li><!--
-            --><li>3Dアニメーション</li><!--
-            --><li>作画アニメーション</li><!--
-            --><li>Webデザイン</li><!--
-            --><li>グラフィックデザイン</li><!--
-            --><li>システムアプリケーション</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h1 class="headline">お問い合わせ</h1>
-          <address>
-            <dl class="contact-dl">
-              <dt>主催</dt>
-              <dd>
-                <a class="nowrap ecc" href="http://comp.ecc.ac.jp/" target="_blank">ECCコンピュータ専門学校</a><!--
-                --><span class="nowrap">ECC EXPO運営実行委員会</span>
-              </dd>
-              <dt>住所</dt>
-              <dd>
-                <span class="nowrap">〒530-0015</span><!--
-                --><span class="nowrap">大阪市北区中崎西2-3-35</span>
-              </dd>
-              <dt>電話</dt>
-              <dd>06-6374-0144</dd>
-            </dl>
-          </address>
-        </section>
-      </main>
-
-      <footer class="copyright">
-        Copyright © 2015 ECC EXPO All Rights Reserved.
+        <p>
+          <a href="http://comp.ecc.ac.jp/" target="_blank">
+            <img src="/assets/img/ecc.png" width="184" height="23" alt="ECCコンピュータ専門学校">
+          </a>
+        </p>
+        <p class="brilliance">
+          <small>Copyright © ECC EXPO 2015 All Rights Reserved.</small>
+        </p>
       </footer>
     </div>
 
