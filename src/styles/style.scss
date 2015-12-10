@@ -86,6 +86,7 @@ address {
   position: fixed;
   right: 50%;
   bottom: 50%;
+  z-index: 9999;
   width: calc(100% - 2rem);
   max-width: 700px;
   max-height: calc(100% - 2rem);
