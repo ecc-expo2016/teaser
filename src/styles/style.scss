@@ -33,11 +33,14 @@ address {
 }
 
 .catch {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
   margin-bottom: 4rem;
   text-align: right;
 
   @media (min-width: 40rem) {
+    margin-top: 4rem;
+    margin-right: 4rem;
     margin-bottom: 6rem;
   }
 }
@@ -55,7 +58,7 @@ address {
 .info {
   margin-top: 2rem;
   margin-bottom: 3rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -198,9 +201,17 @@ address {
 .footer {
   margin-top: 8rem;
   text-align: center;
+
+  @media (min-height: 650px) {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .socials {
+  margin-bottom: 1rem;
   list-style: none;
 
   li {
@@ -217,6 +228,14 @@ address {
     &:hover {
       transform: scale(1.2);
     }
+  }
+}
+
+.ecc {
+  transition: opacity .5s;
+
+  &:hover {
+    opacity: .5;
   }
 }
 
