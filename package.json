@@ -24,7 +24,6 @@
     "lodash.random": "^3.0.1",
     "lodash.sample": "^3.1.0",
     "lodash.times": "^3.0.3",
-    "picturefill": "^3.0.1",
     "pixi.js": "^3.0.8",
     "sanitize.css": "^3.0.0",
     "tween.js": "^16.3.1"
