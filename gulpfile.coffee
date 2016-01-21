@@ -5,6 +5,7 @@ source = require 'vinyl-source-stream'
 buffer = require 'vinyl-buffer'
 runSequence = require 'run-sequence'
 browserSync = require 'browser-sync'
+del = require 'del'
 { stream } = browserSync
 $ = require('gulp-load-plugins')()
 
@@ -81,4 +82,7 @@ gulp.task 'enable-dev-mode', -> isDev = true
 gulp.task 'dev', ->
   runSequence 'enable-dev-mode', ['default', 'scripts', 'serve']
 
-gulp.task 'build', ['default', 'scripts']
+gulp.task 'clean', -> del 'dist/**/*'
+
+gulp.task 'build', ->
+  runSequence 'clean', ['default', 'scripts']

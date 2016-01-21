@@ -3,7 +3,7 @@
 const share = {
   init() {
     this.title = 'ECC EXPO 2016 Teaser Site';
-    this.href = 'http://expo-ecc.com/';
+    this.href = 'http://ecc-expo2016.github.io/teaser/';
 
     const twitterBtn = document.getElementById('twitter');
     twitterBtn.addEventListener('click', this.twitter.bind(this));
